@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wea-the/CalHub/main/Load-Script.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wea-the/CalHub/main/Script-Load.lua"))()
