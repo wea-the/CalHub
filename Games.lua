@@ -2,9 +2,9 @@
 local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
 local core = game:GetService("CoreGui")
 
-local games = {
+local gameList = {
     [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/Eternal-Bob.lua'))()",
-    [6403373529] = "loadstring(game:HttpGet('https://pastebin.com/raw/ejSuqKqh'))()"
+    [2380077519] = "loadstring(game:HttpGet('https://pastebin.com/raw/ejSuqKqh'))()"
 }
 
 if teleportFunc then
@@ -21,8 +21,8 @@ if teleportFunc then
     )
 end
 
-if games[game.PlaceId] ~= nil then
-    loadstring(games[tonumber(game.PlaceId)])()
+if gameList[game.GameId] ~= nil then
+    loadstring(gameList[tonumber(game.GameId)])()
 else
     game.Players.LocalPlayer:Kick("Game Not Supported! :(")
 end
