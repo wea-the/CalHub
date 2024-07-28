@@ -1,4 +1,4 @@
---//This is where all the scripts for the supported games located. All the links here are protected.\\
+-- This is where all the scripts for the supported games located. All the links here are protected.
 local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
 if teleportFunc then
     teleportFunc(
