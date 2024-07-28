@@ -12,7 +12,7 @@ game.Players.LocalPlayer
 
 local gameList = {
     -- Eternal Bob (Slap Battles)
-    [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/Eternal-Bob.lua'))()"
+    [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/EternalBob.txt'))()"
 }
 
 if gameList[game.PlaceId] ~= nil then
