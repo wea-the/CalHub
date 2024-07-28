@@ -12,12 +12,11 @@ game.Players.LocalPlayer
 
 local gameList = {
     -- Eternal Bob (Slap Battles)
-    [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/Eternal-Bob.lua'))()",
-    [2380077519] = "loadstring(game:HttpGet('https://pastebin.com/raw/ejSuqKqh'))()"
+    [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/Eternal-Bob.lua'))()"
 }
 
-if gameList[game.GameId] ~= nil then
-    loadstring(gameList[tonumber(game.GameId)])()
+if gameList[game.PlaceId] ~= nil then
+    loadstring(gameList[tonumber(game.PlaceId)])()
 else
     game.Players.LocalPlayer:Kick("Game Not Supported! :(")
 end
