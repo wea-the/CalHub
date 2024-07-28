@@ -9,7 +9,7 @@ local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_o
 local core = game:GetService("CoreGui")
 if games[game.PlaceId] ~= nil then
     if teleportFunc then
-        teleportFunc([[
+        teleportFunc(
             if not game:IsLoaded() then
                 local mes = Instance.new("Message")
                 mes.Parent = core
@@ -21,7 +21,7 @@ if games[game.PlaceId] ~= nil then
             game.Players.LocalPlayer
             wait(0.10)
             loadstring(games[tonumber(game.PlaceId)])()
-        ]])
+        )
     end
 else
     game.Players.LocalPlayer:Kick("Game Not Supported! :(")
