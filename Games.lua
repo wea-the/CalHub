@@ -1,7 +1,8 @@
 --// This is where all the scripts for the supported games located. All the links here are protected. \\
 
 local games = {
-    [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/Eternal-Bob.lua'))()"
+    [13833961666] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/wea-the/CalHub/main/Scripts/Eternal-Bob.lua'))()",
+    [6403373529] = "loadstring(game:HttpGet('https://pastebin.com/raw/ejSuqKqh'))()"
 }
 
 local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
