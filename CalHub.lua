@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/uM9Lz9uz"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wea-the/CalHub/main/Games.lua"))()
