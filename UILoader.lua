@@ -441,10 +441,11 @@ function CalHub.CreateWin(title)
             end)
         end
 
-        function Content:NewToggle(tglTitle, callback)
+        function Content:NewToggle(tglTitle, valueDef, callback)
             tglTitle = tglTitle or "Toggle"
+            valueDef = valueDef or false
             callback = callback or function() end
-            local toggled = false
+            local toggled = valueDef
             local Toggle = Instance.new("TextButton", TabContent)
             local TogglePad = Instance.new("UIPadding", Toggle)
             local ToggleCorner = Instance.new("UICorner", Toggle)
@@ -497,9 +498,11 @@ function CalHub.CreateWin(title)
                     tween:Create(Toggle, tweenInfo(.2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(30, 50, 79)}):Play()
                     tween:Create(ToggleBtnCircle, tweenInfo(.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {Position = UDim2.new(.2, 13, .15, -1), BackgroundColor3 = Color3.fromRGB(255, 255, 255)}):Play()
                 else
-                    tween:Create(ToggleBtn, tweenInfo(.2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(60, 65, 79)}):Play()
-                    tween:Create(Toggle, tweenInfo(.2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(37, 40, 49)}):Play()
-                    tween:Create(ToggleBtnCircle, tweenInfo(.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {Position = UDim2.new(.2, -6, .15, -1), BackgroundColor3 = Color3.fromRGB(135, 139, 150)}):Play()
+                    if toggled == true then
+                        tween:Create(ToggleBtn, tweenInfo(.2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(60, 65, 79)}):Play()
+                        tween:Create(Toggle, tweenInfo(.2, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {BackgroundColor3 = Color3.fromRGB(37, 40, 49)}):Play()
+                        tween:Create(ToggleBtnCircle, tweenInfo(.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out, 0, false, 0), {Position = UDim2.new(.2, -6, .15, -1), BackgroundColor3 = Color3.fromRGB(135, 139, 150)}):Play()
+                    end
                 end
                 toggled = not toggled
                 pcall(callback, toggled)
